@@ -8,8 +8,8 @@
   <title>Home - Shergill Transport</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script src="script.js"></script>
   <!DOCTYPE html>
   <html>
@@ -24,8 +24,8 @@
 
     <script src="script.js"></script>
 
-   
-
+    <!-- translation script -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- This script places a badge on your repl's full-browser view back to your repl's cover page.
   Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue,
   blurple, magenta, pink! -->
@@ -58,39 +58,11 @@
 
         </li>
         <li><a href="rentPage.html">RENT</a></li>
-        <li><a href="inventory.html">INVENTORY</a></li>
+        <li><a href="index.html">HOME</a></li>
         <li> <button id="myBtn" href="">CONTACT US</button></li>
 
       </ul>
     </nav>
-    <!-- Home text section -->
-  
-    <div class="homeInfo">
-      <h1 id="p_homeSlogan"> <mark> <em>"Keeping Fiji <br> Moving" </em></mark></h1>
-      <button type="button" id="b_homeCTARentBtn"> Rent Now <span>&rarr;</span> </button>
-    </div>
-
-    <div class="homeImg">
-      <img id="homePageImg" src="truckk.webp">
-    </div>
-
-    <h2 id="p_homePageServices"> WE TRANSPORT THE FOLLOWING TYPES OF GOODS </h2>
-    <div class="container con3">
-      <div class="grid-item cont1">AGRICULTURAL GRAINS
-        <img id="cardImg1" src="https://clipart-library.com/img/750216.png" width=250px; height=250px;>
-      </div>
-      <div class="grid-item cont2">CONSTRUCTION MINERALS
-        <img id="cardImg2" src="https://www.pngmart.com/files/15/Silhouette-Excavator-PNG-Photos.png" height=250px;
-          width=250px;>
-      </div>
-
-      <div class="grid-item cont3">FROZEN GOODS
-        <img id="cardImg3" src="https://pngimg.com/d/snowflakes_PNG7577.png" height=250px; width=250px;>
-      </div>
-    </div>
-    <button type="button" id="b_finalRentBtnHome"> Rent A Truck <span>&rarr;</span> </button>
-
-  </div>
 
   <!-- The modal -->
   <div id="myModal" class="modal">
@@ -106,7 +78,62 @@
     </div>
   </div>
 
-  <script>
+        <h1 id="p_homePageServices"> OUR INVENTORY </h1>
+
+    <!-- //slideshow -->
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Slideshow container (Sourced from W3schools) -->
+    <div class="slideshow-container fade">
+      <!-- Full images with numbers and message Info -->
+      <div class="Containers">
+        <img class = "slidepic" src="https://media.wired.com/photos/60f9b8a417ecd990dacf3c75/191:100/w_1280,c_limit/Business-Self-Driving-Trucks-TuSimple.jpg" style="width:100%" alt="BAC MONO">
+        <div class="Info">BAC MONO - 1 SEAT</div>
+      </div>
+
+      <div class="Containers">
+        <img class = "slidepic"  src="https://cdn.motor1.com/images/mgl/Vm47y/s3/mazda-mx-5-eunos-edition.jpg" style="width:100%" alt="mx5">
+        <div class="Info">MX5 - 2 SEATS</div>
+      </div>
+
+      <div class="Containers">
+        <img class = "slidepic" src="https://www.driven.co.nz/media/100000129/240419nzhmhoutlander19.jpg?width=820" style="width:100%" alt="Outlander">
+        <div class="Info">OUTLANDER - 7 SEATS</div>
+      </div>
+
+      <div class="Containers">
+        <img class = "slidepic" src="https://img.favcars.com/toyota/estima/wallpapers_toyota_estima_2003_1_b.jpg" style="width:100%" alt="Estima">
+        <div class="Info">ESTIMA - 8 SEATS</div>
+      </div>
+
+      <div class="Containers">
+        <img class = "slidepic" src="http://s3.caradvice.com.au/wp-content/uploads/2014/11/2014-ford-fgx-falcon-xr8-4.jpg" style="width:100%" alt="Falcon">
+        <div class="Info">FALCON - 5 SEATS</div>
+      </div>
+
+      <div class="Containers">
+        <img class = "slidepic" src="https://wallpaperaccess.com/full/1288023.jpg" style="width:100%" alt="Mini">
+        <div class="Info">MINI - 4 SEATS</div>
+      </div>
+      <!-- Back and forward buttons -->
+      <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+      <!-- The circles/dots -->
+      <div style="text-align:center">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+        <span class="dots" onclick="currentSlide(5)"></span>
+        <span class="dots" onclick="currentSlide(6)"></span>
+        </div>
+        <br>
+        <br>
+ 
+   <script>
     // for some reason it doesnt work in the script.js file
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("myBtn");
@@ -126,20 +153,16 @@
       }
     }
   </script>
-</body>
 
 <div class="footer">
   <p>Shergill Transport™ 2023 || ShergillTransport@gmail.com</p>
-  <div id="google_translate_element"></div>
 </div>
 
-    <!-- Translation script -->
+  </div>
+        <!-- Translation script -->
     <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   }
 </script>
-
 </html>
-
-    

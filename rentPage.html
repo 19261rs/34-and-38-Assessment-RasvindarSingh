@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Rent Page - Shergill Transport</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <!-- translation script -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- This script places a badge on your repl's full-browser view back to your repl's cover page.
+  Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue,
+  blurple, magenta, pink! -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+
+</head>
+
+<body>
+  <!-- Nav Container -->
+
+  <div class="container ">
+    <nav>
+      <ul id="menu">
+        <li class="toggle">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+
+        </li>
+
+        <!-- <li><a id = "navHome" href="">HOME</a></li> -->
+
+        <li id="p_logo">
+        <li> <img id="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Khanda_%28Sikhism%29.svg/1200px-Khanda_%28Sikhism%29.svg.png"
+            width=50px; height=50px;> </li>
+        <li>
+          <h3 id="p_logoText"> SHERGILL <br> TRANSPORT</h3>
+        </li>
+
+        </li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="inventory.html">INVENTORY</a></li>
+       <li> <button id="myBtn" href=""  >CONTACT US</button></li>
+
+      </ul>
+    </nav>
+  
+<body> 
+<h1> Truck Rental Form</h1>
+
+  <form id="rentalForm">
+    <!--Name-->
+    <label for="firstName">First Name: </label>
+    <input type="text" id="firstName" name="firstName" required>
+    <label for="lastName">Last Name: </label>
+    <input type="text" id="lastName" name="lastName" required>
+
+  
+   <script>
+    // for some reason it doesnt work in the script.js file
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  
+</body>
+    <!-- Translation script -->
+    <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
+</html>

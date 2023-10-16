@@ -4,37 +4,38 @@ html {
 }
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
- width: 100%;
+  width: 100%;
   height: 100vh;
   position: relative;
   transition: all 0.3s;
-  
+
 }
 
+/* Nav Bar Styles */
 ul {
-  list-style: none; 
+  list-style: none;
 }
 
 ul li a {
   text-decoration: none;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color:darkblue;   
- margin: 50px;
-  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: darkblue;
+  margin: 120px;
+
 }
 
 .menu-open li {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .menu-open {
   transform: translate(-230px, 0);
- 
+
 }
 
 #menu {
@@ -43,6 +44,7 @@ ul li a {
   width: 230px;
   height: 100%;
   position: fixed;
+  top: 0;
   margin: 0;
   padding: 0;
   right: -230px;
@@ -56,15 +58,15 @@ ul li a {
 }
 
 .toggle {
-  top:0;
+  top: 0;
   display: block;
   position: absolute;
   left: -65px;
   cursor: pointer;
-  background: black;
+
   padding: 15px 15px 10px;
-  
-  
+
+
 }
 
 .toggle .bar1,
@@ -72,10 +74,10 @@ ul li a {
 .toggle .bar3 {
   width: 35px;
   height: 4px;
-  background: whitesmoke;
+  background: black;
   margin-bottom: 8px;
   transition: all 0.4s;
-  
+
 }
 
 /* change to X */
@@ -92,16 +94,17 @@ ul li a {
 }
 
 
+
 /* media */
 @media (min-width: 750px) {
   .toggle {
-    top:0;
+    top: 0;
     display: none;
   }
 
   .container.menu-open {
     transform: none;
-    
+
   }
 
   #menu {
@@ -109,13 +112,13 @@ ul li a {
     position: static;
   }
 
-  
+
   #menu li {
     display: inline-block;
     padding: 10px;
   }
 
-  
+
 
   #menu li a:hover,
   #menu li a:focus {
@@ -127,24 +130,378 @@ ul li a {
 
 /* Logo on home page */
 
-h1 {
+/* h1 {
   text-align:left;
   padding-right:500px;
    font-family:sans-serif;
   color:darkblue;
-}
+} */
 
 
 /* Logo on hover cursor */
 
-h3:hover {
+#p_logoText:hover {
 
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
 }
 
 h3 {
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
+/* CTA Button on home page */
+#b_homeCTARentBtn {
+  color: white;
+  background-color: navy;
+
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: none;
+  width: 50%;
+  height: 50px;
+  margin: 50px auto 0;
+  display: block;
+
+
+}
+
+
+#b_homeCTARentBtn:hover {
+  color: black;
+  background-color: orange;
+  cursor: pointer;
+
+}
+
+
+/* Home page title slogan text */
+
+/* Highlight */
+mark {
+  background-color: orange;
+  color: white;
+}
+
+/* Slogan */
+#p_homeSlogan {
+  font-size: 45px;
+  text-align: center;
+  margin: 150px auto 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#p_logo {
+  text-align: left;
+  margin-left: 0;
+
+}
+
+
+.con3 {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  padding-top: 50px;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+
+}
+
+.menu-open a {
+  margin: 20px;
+}
+
+.grid-item {
+  background-color: orange;
+  padding: 20px;
+  width: 300px;
+  height: 25rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Contact button on NAV header  */
+#myBtn {
+  transition-duration: 0.4s;
+
+  background-color: orange;
+  color: navy;
+  border: 2px solid navy;
+  /* Green */
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#myBtn:hover {
+  background: #0077B6;
+  color: #CAF0FB;
+  cursor: pointer;
+
+
+}
+
+#p_homePageServices {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  color: navy;
+}
+
+/* Rent button bottom */
+#b_finalRentBtnHome {
+  color: white;
+  background-color: navy;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border: none;
+  width: 20%;
+  height: 50px;
+  margin: 30px auto 0;
+  display: block;
+
+}
+
+#b_finalRentBtnHome:hover {
+  color: black;
+  background-color: orange;
+  cursor: pointer;
+
+}
+
+
+
+
+
+/* Responsiveness for the home page service cards  */
+@media only screen and (max-width:600px) {}
+
+
+/* Div box placement home page landing */
+.homeInfo {
+  width: 60%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.homeImg {
+
+  width: 40%;
+  height: 100%;
+  float: right;
+  text-align: left;
+}
+
+#homePageImg {
+  max-width: 100%;
+  max-height: auto;
+  margin-top: 10px;
+
+}
+
+
+/* Responsive two first div boxes on home page */
+@media (max-width: 600px) {
+  .homeImg {
+    width: 100%;
+  }
+
+  .homeInfo {
+    width: 100%;
+  }
+
+  .con3 {
+    justify-content: center;
+  }
+
+  .grid-item {
+    width: 50%;
+  }
+
+  /* Div box placement home page landing */
+  .homeInfo {
+    width: 100%;
+    height: 50%;
+    float: left;
+    text-align: center;
+  }
+
+  .homeImg {
+
+    width: 100%;
+    height: 100%;
+    float: right;
+    text-align: left;
+  }
+
+}
+
+
+
+
+#b_homeCTARentBtn span,
+#b_finalRentBtnHome span {
+  margin-left: 5px;
+}
+
+/* #b_homeCTARentBtn span::after,
+#b_finalRentBtnHome span::after {
+
+}
+ */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#p_logoText {
+  color: #001e57;
+}
+
+
+/* RENT PAGE */
+
+
+/* Contact us Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* //inventory */
+
+/* Slideshow container */
+.slideshow-container {
+  padding-top:20px;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Make the images invisible by default */
+.Containers {
+ display:none;
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Info */
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-shadow: 0 0 0.8vh black;
+  text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+/* Faint animation for slideshow */ 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
