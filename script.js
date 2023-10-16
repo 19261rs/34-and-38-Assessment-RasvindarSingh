@@ -89,44 +89,58 @@ setTimeout(() => {
 
 
 
-//Variables
-var TRUCKWEIGHTARRAY = [50000,40000,30000,20000,10000,5000];
-var TRUCKTYPEARRAY = ["Estima", "Outlander", "Falcon", "Mini", "MX5", "BAC Mono"];
-var userFirstName; 
-var userLastName; 
-var userWeightChoice;
-var loop = true;
 
-userAge = prompt("How old are you?", 25);
-userSeatChoice = prompt("How many seats do you want " + userName + "?");
+var userFirstName; 
+
+
+
+
+
+
 
 /**********************************************************************************/
 // MAIN CODE
 /**********************************************************************************/
 
 function start() {
-  //HTML user input values 
-  // userFirstName = document.getElementById("firstName").value; 
-  // userLastName = document.getElementById("lastName").value;
-  // userAge = document.getElementById("userAge").value;
-  // userWeightChoice = document.getElementById("weightLoad").value;
-  
-  
-  // Console log HTML values (testing purposes)
-  console.log(userFirstName);
-  console.log(userLastName);
 
-  userFirstName = prompt("What is your first name?");
-  userLastName = prompt("What is your last name?");
-  userAge = prompt("How old are you?", 25);
-  userWeightChoice = prompt("How much does your load weigh " + userFirstName + "?");
-  alert("Hello " + userFirstName + userLastName);
-  for (i = 0; i < TRUCKWEIGHTARRAY.length; i++) {
-    if (userWeightChoice >= TRUCKWEIGHTARRAY[i]) {
-      alert("Hello " + userFirstName + " " + userLastName + " The " + TRUCKTYPEARRAY[i] + " looks like the best option for you!");
-      break;
-    }
+// Delcaring & assigning variables 
+var TRUCKWEIGHTARRAY = [8,7,5,4,2,1];
+var TRUCKTYPEARRAY = ["Estima", "Outlander", "Falcon", "Mini", "MX5", "BAC Mono"];
+// var userLastName; 
+var userWeightChoice;
+var loop = true;
+var userHireLength 
+var userCost
+const FLATRATE = 100;
+
+// Main code
+alert("Welcome to raz's Rentals!");
+
+userFirstName = prompt("What is your name?");
+while (loop) {
+  if (userFirstName === null) {
+    loop = false;
+
   }
+  else if (userFirstName == "" || userFirstName == " " || !isNaN(Number(userFirstName))) {
+    userFirstName = prompt("Invalid! Enter a valid username please");
+  }
+  else {
+    break;
+
+  }
+}
+userAge = prompt("How old are you?", 25);
+userWeightChoice = prompt("How much does your load weigh " + userFirstName + "?");
+
+for (i = 0; i < TRUCKWEIGHTARRAY.length; i++) {
+  if (userWeightChoice >= TRUCKWEIGHTARRAY[i]) {
+    alert("Hello " + userFirstName + " The " + TRUCKTYPEARRAY[i] + " looks like the best option for you!");
+    break;
+  }
+}
+
 }
 /**********************************************************************************/
 // Functions
