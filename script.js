@@ -140,6 +140,8 @@ for (i = 0; i < TRUCKWEIGHTARRAY.length; i++) {
     break;
   }
 }
+userHireLength = prompt("How many days would you like to hire this car for " + userFirstName + "?");
+
 
 }
 /**********************************************************************************/
