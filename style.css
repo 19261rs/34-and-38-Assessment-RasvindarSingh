@@ -372,24 +372,43 @@ mark {
   color: #001e57;
 }
 
-
+/*********************/
 /* RENT PAGE */
+/*********************/
+/*Setting Form spacing and width*/
 form{
   max-width: 600px;
   margin:auto;
 }
 
+/*Setting form label block (whole line) and spacing */
 label {
   display: block;
   margin-bottom:8px;
 }
 
+/*Setting input box width and giving spacing and border */
 input,select {
   width:100%;
   padding:8px;
   margin-bottom:16px;
   box-sizing: border-box;
 }
+
+/*Rent Button */
+button {
+  background-color:blue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
 
 /* Contact us Modal */
 .modal {
