@@ -414,6 +414,7 @@ button:hover {
 .formGrouping {
   display:  flex;
   justify-content: space-between;
+  gap:16px;
 }
 
 .formGrouping input,
