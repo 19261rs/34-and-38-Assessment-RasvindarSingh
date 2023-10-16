@@ -87,37 +87,14 @@ setTimeout(() => {
 
 //RENTAL FORM CODE STARTS HERE 
 
-// Arrays
-const TRUCKWEIGHTARRAY = [8,7,5,4,2,1];
-const TRUCKTYPEARRAY = ["Estima", "Outlander", "Falcon", "Mini", "MX5", "BAC Mono"];
+
 
 //Variables
 var userFirstName; 
 var userLastName; 
-var userWeightChoice;
-var userAge;
-var userHireLength; 
-var userCost;
-var userTruckChoice;
-var userInsurance;
-var userInsuranceResp;
+var loop = true;
 
-//Constants
-const FLATRATE = 10;
-const MINAGE = 25;
-const MAXAGE = 80;
-const MINWEIGHT = 1; 
-const MAXWEIGHT = 8;
-const INSURANCERATE = 20;
-const MAXRENTDAYS = 14;
-const MINRENTDAYS = 0;
 
-//Validation variables (Booleans)
-var nameValidation = true;
-var ageValidation = true;
-var Validation = true;
-var daysValidation = true;
-var insuranceValidation = true;
 
 /**********************************************************************************/
 // MAIN CODE
@@ -127,16 +104,11 @@ function start() {
   //HTML user input values 
   userFirstName = document.getElementById("firstName").value; 
   userLastName = document.getElementById("lastName").value;
-  // userAge = document.getElementById("age").value;
- 
-
+  
   // Console log HTML values (testing purposes)
   console.log(userFirstName);
   console.log(userLastName);
-  // console.log(userAge);
-  // console.log(userSeatChoice);
-  // console.log(userHireLength);
-  // console.log(userInsuranceResp);
+
 
   alert("Hello " + userFirstName + userLastName);
 }
