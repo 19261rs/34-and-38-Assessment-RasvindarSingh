@@ -396,6 +396,7 @@ input,select {
 }
 
 /*Rent Button */
+
 button {
   background-color:blue;
   color: white;
@@ -405,8 +406,19 @@ button {
   cursor: pointer;
 }
 
+/*hover effect for rent button*/
 button:hover {
   background-color: lightblue;
+}
+
+.formGrouping {
+  display:  flex;
+  justify-content: space-between;
+}
+
+.formGrouping input,
+.formGrouping select {
+  width: 48%;
 }
 
 
