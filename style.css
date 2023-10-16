@@ -413,7 +413,7 @@ button:hover {
 
 .formGrouping {
   display:  flex;
-  justify-content: space-between;
+flex-direction: column;
   gap:16px;
 }
 
