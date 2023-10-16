@@ -16,6 +16,7 @@ body {
 
 }
 
+
 /* Nav Bar Styles */
 ul {
   list-style: none;
@@ -385,6 +386,7 @@ form{
 label {
   display: block;
   margin-bottom:8px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 /*Setting input box width and giving spacing and border */
@@ -438,6 +440,23 @@ flex-direction: column;
   flex:1;
 }
 
+/*Rent Button Container*/
+.submitContainer {
+  display:flex;
+  justify-content:flex-end;
+}
+
+#H1RentTitle {
+  text-align:center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:navy;
+}
+
+#H2RentSubHeading{
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:navy;
+}
   
 /* Contact us Modal */
 .modal {

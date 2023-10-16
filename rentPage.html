@@ -54,12 +54,12 @@
     </nav>
 
     <body>
-      <h1> Truck Rental Form</h1>
+      <h1 id="H1RentTitle"> Truck Rental Form</h1>
 
       <form id="rentalForm">
         <!--User Details-->
         <div class="formGrouping">
-<h2> Personal Information </h2>
+<h2 id="H2RentSubHeading"> Personal Information </h2>
           <!--Name-->
           <label for="firstName"> Name: </label>
           <div class="formGroupingInline">
@@ -78,7 +78,7 @@
           <input type="email" id="userEmail" name="userEmail" required>
        
         <!--Rental Information-->
-        <h2> Rental Information </h2>
+        <h2 id="H2RentSubHeading"> Rental Information </h2>
         <!--Pick Up Date-->
         <div class="formGroupingInline">
           <div class = "dateInput">
@@ -135,7 +135,9 @@
           </select>
 
         <!--Rent Button-->
+        <div class="submitContainer">
         <button type="button" onclick="submitForm()">Rent</button>
+        </div>
       </form>
 
 
