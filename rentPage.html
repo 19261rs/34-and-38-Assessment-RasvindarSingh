@@ -63,19 +63,19 @@
           <!--Name-->
           <label for="firstName" class="required"> Name: </label>
           <div class="formGroupingInline">
-          <input type="text" id="firstName" name="firstName" required>
+          <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required> 
      <!--Last Name-->
-          <input type="text" id="lastName" name="lastName" required>
+          <input type="text" id="lastName" name="lastName"  placeholder="Enter your last name" required>
         </div>
         </div>
 
         <!--Age-->
           <label for="userAge" class="required">Age: </label>
-          <input type="number" id="userAge" name="userAge" required>
+          <input type="number" id="userAge" name="userAge"  placeholder="Enter your age" required>
    
           <!--Email-->
          <label for="userEmail" class="required">Email: </label>
-          <input type="email" id="userEmail" name="userEmail" required>
+          <input type="email" id="userEmail" name="userEmail"  placeholder="Enter your email address" required>
        
         <!--Rental Information-->
         <h2 id="H2RentSubHeading"> Rental Information </h2>
@@ -111,6 +111,7 @@
        
           <label for="weightLoad" class="required">Weight Load: </label>
           <select id="weightLoad" name="weightLoad" required>
+            <option value="" disabled selected>Select Weight Load</option>
             <option value="1"> Weight 1</option>
             <option value="2"> Weight 2</option>
             <option value="3"> Weight 3 </option>
@@ -121,6 +122,7 @@
      
           <label for="insurance" class="required">Insurance: </label>
           <select id="insurance" name="insurance" required>
+            <option value="" disabled selected>Select Your Insurance Plan</option>
             <option value="1"> Insurance 1</option>
             <option value="2"> Insurance 2</option>
             <option value="3"> Insurance 3 </option>
@@ -129,7 +131,8 @@
         <!--Driver-->
         
           <label for="driver" class="required">Driver: </label>
-          <select id="driver" name="driver" required>
+          <select id="driver" name="driver"  placeholder="Would you like a driver?" required>
+            <option value="" disabled selected>Would you like a driver?</option>
             <option value="yes"> Yes</option>
             <option value="no"> No </option>
           </select>
