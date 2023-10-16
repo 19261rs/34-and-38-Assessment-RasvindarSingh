@@ -90,11 +90,15 @@ setTimeout(() => {
 
 
 //Variables
+var TRUCKWEIGHTARRAY = [50000,40000,30000,20000,10000,5000];
+var TRUCKTYPEARRAY = ["Estima", "Outlander", "Falcon", "Mini", "MX5", "BAC Mono"];
 var userFirstName; 
 var userLastName; 
+var userWeightChoice;
 var loop = true;
 
-
+userAge = prompt("How old are you?", 25);
+userSeatChoice = prompt("How many seats do you want " + userName + "?");
 
 /**********************************************************************************/
 // MAIN CODE
@@ -102,15 +106,27 @@ var loop = true;
 
 function start() {
   //HTML user input values 
-  userFirstName = document.getElementById("firstName").value; 
-  userLastName = document.getElementById("lastName").value;
+  // userFirstName = document.getElementById("firstName").value; 
+  // userLastName = document.getElementById("lastName").value;
+  // userAge = document.getElementById("userAge").value;
+  // userWeightChoice = document.getElementById("weightLoad").value;
+  
   
   // Console log HTML values (testing purposes)
   console.log(userFirstName);
   console.log(userLastName);
 
-
+  userFirstName = prompt("What is your first name?");
+  userLastName = prompt("What is your last name?");
+  userAge = prompt("How old are you?", 25);
+  userWeightChoice = prompt("How much does your load weigh " + userFirstName + "?");
   alert("Hello " + userFirstName + userLastName);
+  for (i = 0; i < TRUCKWEIGHTARRAY.length; i++) {
+    if (userWeightChoice >= TRUCKWEIGHTARRAY[i]) {
+      alert("Hello " + userFirstName + " " + userLastName + " The " + TRUCKTYPEARRAY[i] + " looks like the best option for you!");
+      break;
+    }
+  }
 }
 /**********************************************************************************/
 // Functions
