@@ -53,15 +53,15 @@
       </ul>
     </nav>
 
-    <body>
+    <body id="rentPageBody">
       <h1 id="H1RentTitle"> Truck Rental Form</h1>
-
+      <!--Order Form-->
       <form id="rentalForm">
         <!--User Details-->
         <div class="formGrouping">
 <h2 id="H2RentSubHeading"> Personal Information </h2>
           <!--Name-->
-          <label for="firstName"> Name: </label>
+          <label for="firstName" class="required"> Name: </label>
           <div class="formGroupingInline">
           <input type="text" id="firstName" name="firstName" required>
      <!--Last Name-->
@@ -70,11 +70,11 @@
         </div>
 
         <!--Age-->
-          <label for="userAge">Age: </label>
+          <label for="userAge" class="required">Age: </label>
           <input type="number" id="userAge" name="userAge" required>
    
           <!--Email-->
-         <label for="userEmail">Email: </label>
+         <label for="userEmail" class="required">Email: </label>
           <input type="email" id="userEmail" name="userEmail" required>
        
         <!--Rental Information-->
@@ -82,12 +82,12 @@
         <!--Pick Up Date-->
         <div class="formGroupingInline">
           <div class = "dateInput">
-          <label for="pickupDate">Pickup Date:</label>
+          <label for="pickupDate" class="required">Pickup Date:</label>
           <input type="date" id="pickupDate" name="pickupDate" required>
           </div>
           <!--Pick Up Time-->
           <div class = "timeInput">
-          <label for="pickupTime">Pickup Time:</label>
+          <label for="pickupTime" class="required">Pickup Time:</label>
           <input type="time" id="pickupTime" name="pickupTime" required>
         </div>
         </div>
@@ -95,13 +95,13 @@
         <!--Drop Off Date-->
         <div class="formGroupingInline">
           <div class = "dateInput">
-            <label for="dropoffDate">Dropoff Date:</label>
+            <label for="dropoffDate" class="required">Dropoff Date:</label>
             <input type="date" id="dropoffDate" name="dropoffDate" required>
           </div>
           <!--Drop Off Time-->
           
             <div class="timeInput">
-            <label for="dropoffTime">Dropoff Time:</label>
+            <label for="dropoffTime" class="required">Dropoff Time:</label>
             <input type="time" id="dropoffTime" name="dropoffTime" required>
           </div>
         </div>
@@ -109,7 +109,7 @@
 
         <!--Weight Load-->
        
-          <label for="weightLoad">Weight Load: </label>
+          <label for="weightLoad" class="required">Weight Load: </label>
           <select id="weightLoad" name="weightLoad" required>
             <option value="1"> Weight 1</option>
             <option value="2"> Weight 2</option>
@@ -119,7 +119,7 @@
        
         <!--Insurance-->
      
-          <label for="insurance">Insurance: </label>
+          <label for="insurance" class="required">Insurance: </label>
           <select id="insurance" name="insurance" required>
             <option value="1"> Insurance 1</option>
             <option value="2"> Insurance 2</option>
@@ -128,7 +128,7 @@
    
         <!--Driver-->
         
-          <label for="driver">Driver: </label>
+          <label for="driver" class="required">Driver: </label>
           <select id="driver" name="driver" required>
             <option value="yes"> Yes</option>
             <option value="no"> No </option>
