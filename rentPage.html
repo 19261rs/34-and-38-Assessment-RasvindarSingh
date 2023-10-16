@@ -110,13 +110,8 @@
         <!--Weight Load-->
        
           <label for="weightLoad" class="required">Weight Load: </label>
-          <select id="weightLoad" name="weightLoad" required>
-            <option value="" disabled selected>Select Weight Load</option>
-            <option value="1"> Weight 1</option>
-            <option value="2"> Weight 2</option>
-            <option value="3"> Weight 3 </option>
-            <option value="4"> Weight 4</option>
-          </select>
+          <input id="weightLoad" name="weightLoad" placeholder="Enter your load weight" required>
+
        
         <!--Insurance-->
      
@@ -139,7 +134,7 @@
 
         <!--Rent Button-->
         <div class="submitContainer">
-        <button type="button" onclick="submitForm()">Rent</button>
+        <button type="button" onclick="start()">Rent</button>
         </div>
       </form>
 
@@ -147,9 +142,10 @@
       <footer>
         <p>Shergill Transport™ 2023 || ShergillTransport@gmail.com</p>
         <div id="google_translate_element"></div>
+        <label for="fontSize">Adjust Font Size:</label>
+        <input type="range" id="fontSize" class="fontSizeSlider" min="12" max="18" step="1" value="16" oninput="changeFontSize(this.value)">
+
       </footer>
-
-
       <script>
         // for some reason it doesnt work in the script.js file
         var modal = document.getElementById("myModal");
@@ -168,6 +164,14 @@
           if (event.target == modal) {
             modal.style.display = "none";
           }
+        }
+      </script>
+      <script>
+        // Setting initial font size
+        document.body.style.fontSize = '16px';
+
+        function changeFontSize(size) {
+          document.body.style.fontSize = size + 'px';
         }
       </script>
 
