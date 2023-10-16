@@ -61,49 +61,53 @@
         <div class="formGrouping">
 
           <!--Name-->
-          <label for="firstName">First Name: </label>
+          <label for="firstName"> Name: </label>
+          <div class="formGroupingInline">
           <input type="text" id="firstName" name="firstName" required>
-
-          <!--Last Name-->
-
-          <label for="lastName">Last Name: </label>
+     <!--Last Name-->
           <input type="text" id="lastName" name="lastName" required>
+        </div>
         </div>
 
         <!--Age-->
-        <div class="formGrouping">
+        
           <label for="userAge">Age: </label>
           <input type="number" id="userAge" name="userAge" required>
+   
 
           <!--Email-->
+    
           <label for="userEmail">Email: </label>
           <input type="email" id="userEmail" name="userEmail" required>
-        </div>
+       
         <!--Rental Information-->
         <!--Pick Up Date-->
 
-        <div class="formGrouping">
-
+        <div class="formGroupingInline">
+          <div class = "dateInput">
           <label for="pickupDate">Pickup Date:</label>
           <input type="date" id="pickupDate" name="pickupDate" required>
+          </div>
           <!--Pick Up Time-->
-
+     
+          <div class = "timeInput">
           <label for="pickupTime">Pickup Time:</label>
           <input type="time" id="pickupTime" name="pickupTime" required>
         </div>
-
+        </div>
 
         <!--Drop Off Date-->
         <div class="formGrouping">
-       
+          <div class = "dateInput">
             <label for="dropoffDate">Dropoff Date:</label>
             <input type="date" id="dropoffDate" name="dropoffDate" required>
-     
+          </div>
           <!--Drop Off Time-->
-          
+            <div class="timeInput">
             <label for="dropoffTime">Dropoff Time:</label>
             <input type="time" id="dropoffTime" name="dropoffTime" required>
           </div>
+        </div>
    
 
         <!--Weight Load-->

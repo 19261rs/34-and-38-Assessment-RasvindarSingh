@@ -422,7 +422,23 @@ button:hover {
   width: 48%;
 }
 
+.formGroupingInline {
+  display: flex;
+  gap: 16px;
+  flex:1;
+}
 
+.formGroupingInline input {
+  flex:1;
+}
+
+
+.formGroupingInline .dateInput,
+.formGroupingInline .timeInput {
+  flex:1;
+}
+
+  
 /* Contact us Modal */
 .modal {
   display: none;
