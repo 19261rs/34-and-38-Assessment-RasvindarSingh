@@ -376,13 +376,12 @@ mark {
 /*********************/
 /* RENT PAGE */
 /*********************/
-#rentPageBody{
-  padding:20px;
-}
+
 /*Setting Form spacing and width*/
 form{
   max-width: 600px;
   margin:auto;
+  padding:20px;
 }
 
 /*Setting form label block (whole line) and spacing */
@@ -396,6 +395,14 @@ label {
 label.required::after{
   content: ' * ';
   color:red;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 /*Setting input box width and giving spacing and border */
