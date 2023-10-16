@@ -80,28 +80,34 @@
        </div>
     <!--Rental Information-->
     <!--Pick Up Date-->
-      <div class="formGrouping">
-        <div style="width: 48%;">
-    <label for="pickupDate">Pick Up Date: </label>
-    <input type="date" id="userAge" name="userAge" required>
-       </div>
-     <!--Drop Off Date-->
-        <div style="width: 48%;">
-      <label for="dropoffDate">Drop Off Date: </label>
-      <input type="date" id="dropoffDate" name="dropoffDate" required>
-       </div>
-      </div>
+
+    <div class="formGrouping">
+      <div style="width: 48%;">
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+          </div>
     <!--Pick Up Time-->
-      <div class="formGrouping">
-    <label for="pickupTime">Pick Up Time: </label>
-    <input type="time" id="pickupTime" name="pickupTime" required>
-       </div>
+          <div style="width: 48%;">
+            <label for="pickupTime">Pickup Time:</label>
+            <input type="time" id="pickupTime" name="pickupTime" required>
+          </div>
+  </div>
+    
+     <!--Drop Off Date-->
+        <div class="formGrouping">
+          <div style="width: 48%;">
+            <label for="dropoffDate">Dropoff Date:</label>
+            <input type="date" id="dropoffDate" name="dropoffDate" required>
+          </div>
      <!--Drop Off Time-->
-      <div class="formGrouping">
-      <label for="dropoffTime">Drop Off Time: </label>
-      <input type="time" id="dropoffTime" name="dropoffTime" required>
-       </div>
+          <div style="width: 48%;">
+            <label for="dropoffTime">Dropoff Time:</label>
+            <input type="time" id="dropoffTime" name="dropoffTime" required>
+          </div>
+        </div>
+       
     <!--Weight Load-->
+    <div class="formGrouping">
     <label for="weightLoad">Weight Load: </label>
     <select id="weightLoad" name="weightLoad" required>
     <option value="1"> Weight 1</option>
@@ -109,19 +115,24 @@
         <option value="3"> Weight 3 </option>
           <option value="4">  Weight 4</option>    
     </select>
+    </div>
     <!--Insurance-->
+    <div class="formGrouping">
     <label for="insurance">Insurance: </label>
     <select id="insurance" name="insurance" required>
     <option value="1">  Insurance 1</option>
       <option value="2">  Insurance 2</option>
       <option value="3"> Insurance 3 </option>  
     </select>
+    </div>
     <!--Driver-->
+    <div class="formGrouping">
     <label for="driver">Driver: </label>
     <select id="driver" name="driver" required>
     <option value="yes">  Yes</option>
       <option value="no"> No </option>
     </select>
+    </div>
     <!--Rent Button-->
     <button type="button" onclick= "submitForm()">Rent</button>
   </form>
