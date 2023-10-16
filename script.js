@@ -142,7 +142,12 @@ for (i = 0; i < TRUCKWEIGHTARRAY.length; i++) {
 }
 userHireLength = prompt("How many days would you like to hire this car for " + userFirstName + "?");
 
+// Cost calculation
+userCost = Number(userHireLength * userWeightChoice / 10 * FLATRATE);
+console.log(userCost);
 
+//Order message
+alert("YOUR ORDER: \nYou will recieve a " + TRUCKTYPEARRAY[i] + " for " + userHireLength + " days and it'll cost you a total of $" + userCost + " to rent " + userFirstName);
 }
 /**********************************************************************************/
 // Functions
