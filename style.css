@@ -483,7 +483,14 @@ flex-direction: column;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:navy;
 }
-  
+
+
+/*RED BOX FOR ERROR ON HTML INPUT*/
+.error-border {
+  border: 1px solid red;
+}
+
+
 /* Contact us Modal */
 .modal {
   display: none;
