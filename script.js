@@ -140,9 +140,16 @@ function start() {
   userWeightChoice = document.getElementById("weightLoad").value;
   userEmail = document.getElementById("userEmail").value;
   userDriverResp = document.getElementById("driver").value;
+
+  var pickupDateInput = document.getElementById("pickupDate");
+  var dropoffDateInput = document.getElementById("dropoffDate");
+  
   // Get the selected dates from the input fields
   var pickupDate = new Date(document.getElementById('pickupDate').value);
   var dropoffDate = new Date(document.getElementById('dropoffDate').value);
+
+
+
 
   // Calculate the difference in milliseconds
   var timeDifference = dropoffDate - pickupDate;
@@ -207,18 +214,37 @@ function start() {
 
 
   // email validation
-var userEmailInput = document.getElementById("userEmail");
-    userEmail = userEmail.trim();
+  var userEmailInput = document.getElementById("userEmail");
+  userEmail = userEmail.trim();
 
   //checking email isnt empty string
-  if (userEmail !=='') {
+  if (userEmail !== '') {
     var emailValidation = true;
     userEmailInput.classList.remove("error-border");
   } else {
     var emailValidation = false;
     userEmailInput.classList.add("error-border");
+
+  }
+
+
+  //Date validation
+
+  
+  if (pickupDate && dropoffDate){
+    var dateValidation = true;
+    pickupDateInput.classList.remove("error-border")
+    dropoffDateInput.classList.remove("error-border")
+
+  } else {
+    var dateValidation = false;
+    pickupDateInput.classList.add("error-border")
+    dropoffDateInput.classList.add("error-border")
+
     
   }
+
+
   
   //Hire Length validation 
   const regExpHire = /^[0-9]+$/;
@@ -262,24 +288,23 @@ var userEmailInput = document.getElementById("userEmail");
   }
 
   //Driver validation
-  // Insurance validation
-  const regExpDriver = /^(?:Yes\b|No\b)+$/i;
+  const regExpDriver = /^(?:Yes|No)$/i;
   var userDriverResp = userDriverResp.trim();
   var userDriverInput = document.getElementById("driver");
 
   console.log(regExpDriver.test(userDriverResp))
-  if (regExpDriver.test(userDriverResp) == true) {
-    // if insurance input is valid
-    var driverValidation = true;
+  if (regExpDriver.test(userDriverResp)) {
+    // if driver input is valid
+    driverValidation = true;
     userDriverInput.classList.remove("error-border");
   } else {
-    var driverValidation = false;
+    driverValidation = false;
     userDriverInput.classList.add("error-border");
-
   }
 
+
   // Checking validation and continuing if true, else invalid message
-  if (nameValidation == true && lastNameValidation && ageValidation == true && daysValidation == true && weightValidation == true && insuranceValidation == true) {
+  if (nameValidation == true && lastNameValidation && ageValidation == true && daysValidation == true && weightValidation == true && insuranceValidation == true && driverValidation) {
     truckSelection();
   } else {
     validationFailed();
@@ -342,25 +367,29 @@ var userEmailInput = document.getElementById("userEmail");
   // Failed validation function 
   function validationFailed() {
     if (nameValidation !== true) {
-      showMessageRentalModal("Please enter a valid name!");
+      showMessageRentalModal("ERROR: Please enter a valid name!");
     } else if (lastNameValidation !== true) {
-      showMessageRentalModal("Please enter a valid last name!");
+      showMessageRentalModal("ERROR: Please enter a valid last name!");
 
     } else if (ageValidation !== true) {
-      showMessageRentalModal("Please enter a valid age! You must be between 25-80 years old to hire a vehicle.");
-    } else if (emailValidation !==true) {
-      showMessageRentalModal("Please enter a valid email!");
+      showMessageRentalModal("ERROR: Please enter a valid age! You must be between 25-80 years old to hire a vehicle.");
+    } else if (emailValidation !== true) {
+      showMessageRentalModal("ERROR: Please enter a valid email!");
+
+    } else if (dateValidation !== true) {
+      showMessageRentalModal("ERROR: Please enter a date!");
+
       
     }else if (weightValidation !== true) {
 
-      showMessageRentalModal("Sorry, it looks like we don't have a vehicle that can haul that weight available!");
+      showMessageRentalModal("ERROR: Sorry, it looks like we don't have a vehicle that can haul that weight available!");
 
     } else if (daysValidation !== true) {
-      showMessageRentalModal("Please enter valid number of days you'd like to hire for!");
+      showMessageRentalModal("ERROR: Please enter valid number of days you'd like to hire for!");
     } else if (insuranceValidation !== true) {
-      showMessageRentalModal("Invalid! Please make sure you've selected either 'Yes' or 'No' for insurance!");
+      showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for insurance!");
     } else if (driverValidation !== true) {
-      showMessageRentalModal("Invalid! Please make sure you've selected either 'Yes' or 'No' for driver!");
+      showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for driver!");
     }
   }
 }

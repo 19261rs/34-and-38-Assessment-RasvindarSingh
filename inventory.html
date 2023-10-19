@@ -154,9 +154,7 @@
     }
   </script>
 
-<div class="footer">
-  <p>Shergill Transport™ 2023 || ShergillTransport@gmail.com</p>
-</div>
+
 
   </div>
         <!-- Translation script -->
@@ -165,4 +163,16 @@
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   }
 </script>
-</html>
+
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>Shergill Transport™ 2023 || ShergillTransport@gmail.com</p>
+    <div id="google_translate_element"></div>
+    <label for="fontSize">Adjust Font Size:</label>
+    <input type="range" id="fontSize" class="fontSizeSlider" min="12" max="18" step="1" value="16" oninput="changeFontSize(this.value)">
+
+  </footer>
+</body>
+  </html>
+  
