@@ -223,11 +223,13 @@ function start() {
 
 
   // email validation
+
   var userEmailInput = document.getElementById("userEmail");
   userEmail = userEmail.trim();
+  const regExpEmail = /^[^\s@]+@gmail\.com$/;
 
   //checking email isnt empty string
-  if (userEmail !== '') {
+  if (userEmail !== '' && regExpEmail.test(userEmail)) {
     var emailValidation = true;
     userEmailInput.classList.remove("error-border");
   } else {
@@ -256,6 +258,9 @@ function start() {
     dropoffDateInput.classList.add("error-border")
   }
 
+
+// TIME VALIDATION 
+  
   var pickupTimeInput = document.getElementById("pickupTime");
   var dropoffTimeInput = document.getElementById("dropoffTime");
 
