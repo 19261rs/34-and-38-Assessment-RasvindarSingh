@@ -41,6 +41,7 @@ var weightValidation = true;
 var daysValidation = true;
 var insuranceValidation = true;
 var driverValidation = true;
+var timeValidation = true;
 
 // END OF RENT PAGE GLOBAL VARIABLES 
 
@@ -141,16 +142,15 @@ function start() {
   userEmail = document.getElementById("userEmail").value;
   userDriverResp = document.getElementById("driver").value;
 
-  var pickupDateInput = document.getElementById("pickupDate");
-  var dropoffDateInput = document.getElementById("dropoffDate");
   
   // Get the selected dates from the input fields
   var pickupDate = new Date(document.getElementById('pickupDate').value);
   var dropoffDate = new Date(document.getElementById('dropoffDate').value);
 
+  var pickupDateInput = document.getElementById("pickupDate");
+  var dropoffDateInput = document.getElementById("dropoffDate");
 
-
-
+ 
   // Calculate the difference in milliseconds
   var timeDifference = dropoffDate - pickupDate;
 
@@ -161,6 +161,15 @@ function start() {
   userHireLength = numDays;
   console.log(userHireLength);
 
+
+  //time user input value
+  var pickupTime = document.getElementById('pickupTime').value;
+  var dropoffTime = document.getElementById('dropoffTime').value;
+
+
+
+
+  // Insurance user input value
   userInsuranceResp = document.getElementById("insurance").value;
 
   // Console log HTML values (testing purposes)
@@ -228,21 +237,7 @@ function start() {
   }
 
 
-  //Date validation
-
-  
-  if (pickupDate && dropoffDate){
-    var dateValidation = true;
-    pickupDateInput.classList.remove("error-border")
-    dropoffDateInput.classList.remove("error-border")
-
-  } else {
-    var dateValidation = false;
-    pickupDateInput.classList.add("error-border")
-    dropoffDateInput.classList.add("error-border")
-
-    
-  }
+  //
 
 
   
@@ -252,11 +247,43 @@ function start() {
   console.log(regExpHire.test(userHireLength))
   if (regExpHire.test(userHireLength) == true && userHireLength > MINRENTDAYS && userHireLength <= MAXRENTDAYS) {
     // If days input is valid
-    var daysValidation = true;
+     daysValidation = true;
+    pickupDateInput.classList.remove("error-border")
+    dropoffDateInput.classList.remove("error-border")
   } else {
-    var daysValidation = false;
+     daysValidation = false;
+    pickupDateInput.classList.add("error-border")
+    dropoffDateInput.classList.add("error-border")
   }
 
+  var pickupTimeInput = document.getElementById("pickupTime");
+  var dropoffTimeInput = document.getElementById("dropoffTime");
+
+  if (pickupTimeInput.value.trim() !== '' && dropoffTimeInput.value.trim() !== '') {
+    // Get the values of the input elements
+    var pickupTime = new Date(pickupDate.toDateString() + ' ' + pickupTimeInput.value);
+    var dropoffTime = new Date(dropoffDate.toDateString() + ' ' + dropoffTimeInput.value);
+
+    if (!isNaN(pickupTime.getTime()) && !isNaN(dropoffTime.getTime()) && dropoffTime.getTime() > pickupTime.getTime()) {
+      // success
+      console.log("time validation success");
+      var timeValidation = true;
+    } else {
+      // fail
+      console.log("time validation fail");
+      var timeValidation = false;
+      pickupTimeInput.classList.add("error-border");
+      dropoffTimeInput.classList.add("error-border");
+    }
+  } else {
+    // Handle the case where time values are empty
+    console.log("time validation fail - empty time values");
+    var timeValidation = false;
+    pickupTimeInput.classList.add("error-border");
+    dropoffTimeInput.classList.add("error-border");
+  }
+
+  
   //Weight Selection validation
   const regExpWeight = /^[0-9]+$/;
   var userWeightInput = document.getElementById("weightLoad");
@@ -304,7 +331,7 @@ function start() {
 
 
   // Checking validation and continuing if true, else invalid message
-  if (nameValidation == true && lastNameValidation && ageValidation == true && daysValidation == true && weightValidation == true && insuranceValidation == true && driverValidation) {
+  if (nameValidation == true && lastNameValidation && ageValidation == true && daysValidation == true && timeValidation == true && weightValidation == true && insuranceValidation == true && driverValidation) {
     truckSelection();
   } else {
     validationFailed();
@@ -358,7 +385,7 @@ function start() {
     var userConfirmResp = confirm("We recommend that the " + userTruckChoice + " is the best vehicle for you! It can haul  " + userWeightChoice + " tonnes, making it the best option.\nPlease confirm if you'd like the " + userTruckChoice + ".");
 
     if (userConfirmResp == true) {
-      showMessageRentalModal("YOUR ORDER: Hello " + userFirstName + " you've chosen the " + userTruckChoice + ". It can haul " + userWeightChoice + " tonnes and it will cost $" + userCost + " to hire for " + userHireLength + " day(s). You will pick it up on " + pickupDate + " and drop it off on " + dropoffDate + ". More details will be sent to your email address " + userEmail);
+      showMessageRentalModal("YOUR ORDER: Hello " + userFirstName + " you've chosen the " + userTruckChoice + ". It can haul " + userWeightChoice + " tonnes and it will cost $" + userCost + " to hire for " + userHireLength + " day(s). The pick up time is " + pickupTime + " the drop off time is " + dropoffTime + ". More details will be sent to your email address " + userEmail);
     } else {
       showMessageRentalModal("Your order has been canceled.");
     }
@@ -376,17 +403,16 @@ function start() {
     } else if (emailValidation !== true) {
       showMessageRentalModal("ERROR: Please enter a valid email!");
 
-    } else if (dateValidation !== true) {
-      showMessageRentalModal("ERROR: Please enter a date!");
-
-      
+    
     }else if (weightValidation !== true) {
 
       showMessageRentalModal("ERROR: Sorry, it looks like we don't have a vehicle that can haul that weight available!");
 
     } else if (daysValidation !== true) {
       showMessageRentalModal("ERROR: Please enter valid number of days you'd like to hire for!");
-    } else if (insuranceValidation !== true) {
+    } else if (timeValidation !== true){
+    showMessageRentalModal("ERROR: Please enter valid pick up time and drop off time");
+    }else if(insuranceValidation !== true) {
       showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for insurance!");
     } else if (driverValidation !== true) {
       showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for driver!");
