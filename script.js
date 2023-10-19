@@ -132,6 +132,8 @@ setTimeout(() => {
 // MAIN CODE - GLOBAL VARIABLES DECLARED AT TOP OF script.js
 /**********************************************************************************/
 
+
+
 function start() {
 
   //HTML user input values 
@@ -147,10 +149,11 @@ function start() {
   var pickupDate = new Date(document.getElementById('pickupDate').value);
   var dropoffDate = new Date(document.getElementById('dropoffDate').value);
 
+  //getting the selected dates from the calendar input 
   var pickupDateInput = document.getElementById("pickupDate");
   var dropoffDateInput = document.getElementById("dropoffDate");
 
- 
+
   // Calculate the difference in milliseconds
   var timeDifference = dropoffDate - pickupDate;
 
@@ -165,9 +168,6 @@ function start() {
   //time user input value
   var pickupTime = document.getElementById('pickupTime').value;
   var dropoffTime = document.getElementById('dropoffTime').value;
-
-
-
 
   // Insurance user input value
   userInsuranceResp = document.getElementById("insurance").value;
@@ -242,25 +242,25 @@ function start() {
   //
 
 
-  
+
   //Hire Length validation 
   const regExpHire = /^[0-9]+$/;
   // var userHireLength = userHireLength.trim();
   console.log(regExpHire.test(userHireLength))
   if (regExpHire.test(userHireLength) == true && userHireLength > MINRENTDAYS && userHireLength <= MAXRENTDAYS) {
     // If days input is valid
-     daysValidation = true;
+    daysValidation = true;
     pickupDateInput.classList.remove("error-border")
     dropoffDateInput.classList.remove("error-border")
   } else {
-     daysValidation = false;
+    daysValidation = false;
     pickupDateInput.classList.add("error-border")
     dropoffDateInput.classList.add("error-border")
   }
 
 
-// TIME VALIDATION 
-  
+  // TIME VALIDATION 
+
   var pickupTimeInput = document.getElementById("pickupTime");
   var dropoffTimeInput = document.getElementById("dropoffTime");
 
@@ -288,7 +288,7 @@ function start() {
     dropoffTimeInput.classList.add("error-border");
   }
 
-  
+
   //Weight Selection validation
   const regExpWeight = /^[0-9]+$/;
   var userWeightInput = document.getElementById("weightLoad");
@@ -342,7 +342,7 @@ function start() {
     validationFailed();
   }
   /**********************************************************************************/
-  // Functions
+  // Functions - Rental Form
   /**********************************************************************************/
 
   // Matching vehicle based off number of car seats
@@ -408,16 +408,16 @@ function start() {
     } else if (emailValidation !== true) {
       showMessageRentalModal("ERROR: Please enter a valid email!");
 
-    
-    }else if (weightValidation !== true) {
+
+    } else if (weightValidation !== true) {
 
       showMessageRentalModal("ERROR: Sorry, it looks like we don't have a vehicle that can haul that weight available!");
 
     } else if (daysValidation !== true) {
       showMessageRentalModal("ERROR: Please enter valid number of days you'd like to hire for!");
-    } else if (timeValidation !== true){
-    showMessageRentalModal("ERROR: Please enter valid pick up time and drop off time");
-    }else if(insuranceValidation !== true) {
+    } else if (timeValidation !== true) {
+      showMessageRentalModal("ERROR: Please enter valid pick up time and drop off time");
+    } else if (insuranceValidation !== true) {
       showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for insurance!");
     } else if (driverValidation !== true) {
       showMessageRentalModal("ERROR: Please make sure you've selected either 'Yes' or 'No' for driver!");
