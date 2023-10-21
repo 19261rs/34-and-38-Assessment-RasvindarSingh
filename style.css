@@ -290,7 +290,7 @@ mark {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   border: none;
   width: auto;
-  height: 50px;
+  padding: 15px 30px;
   margin: 30px auto 0;
   display: block;
 
