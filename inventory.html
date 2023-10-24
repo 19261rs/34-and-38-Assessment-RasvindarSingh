@@ -81,21 +81,41 @@
 
     <h1 id="p_homePageServices"> OUR INVENTORY </h1>
 
-    <h1 id="p_homePageServices"> MORE DETAILS </h1>
+    <h1 id="p_homePageServices"> SPECIFICATIONS</h1>
     <div class="container con3">
       <div class="grid-item cont1">
         <h2> FORD F-550</h2>
-        <p> Info </p>
+        
+        <p class="hidden-info"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
+        300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
+        6.8L V10 with CNG/LPG Gaseous Engine Prep Package  </p>
+           <a href="#" class="learn-more">Learn More</a>
+       
       </div>
       <div class="grid-item cont2">
         <h2> Mack Anthem</h2>
 
+       <li>Class: 8</li> 
 
+       <li>Horsepower:  415-505 HP</li>
+
+      <li>Torque: 1,260-1,900 lb. Ft.</li> 
+
+      <li> GVW: 53,000-62,000</li> 
+
+      <li> GCW: 80,000+</li>
+ 
       </div>
 
       <div class="grid-item cont3">
         <h2>Kenworth W990</h2>
-
+<p>SPECIFICATION
+Engine / Powertrain
+PACCAR MX-13 Engine
+12.9 Liter
+405-510 HP
+1,450 – 1,850 lb-ft of Torque
+TruckTech+ Remote Diagnostics</p>
       </div>
     </div>
     <div class="container con3">
@@ -111,6 +131,7 @@
 
       <div class="grid-item cont3">
         <h2>MAN TGX</h2>
+      
 
       </div>
     </div>
@@ -118,6 +139,7 @@
      <a href="rentPage.html"><button type="button" id="b_finalRentBtnHome" > Rent A Truck <span>&rarr;</span> </button></a>
 
     <script>
+      
       // for some reason it doesnt work in the script.js file
       var modal = document.getElementById("myModal");
       var btn = document.getElementById("myBtn");
@@ -138,8 +160,6 @@
       }
     </script>
 
-
-
   </div>
   <!-- Translation script -->
   <script>
@@ -158,6 +178,18 @@
       oninput="changeFontSize(this.value)">
 
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var learnMoreButton = document.querySelector(".learn-more");
+      var hiddenInfo = document.querySelector(".hidden-info");
+
+      learnMoreButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        hiddenInfo.style.display = hiddenInfo.style.display === "none" ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 
 </html>
