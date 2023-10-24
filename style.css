@@ -10,6 +10,11 @@ body {
 
 }
 
+
+a {
+  text-decoration: none;
+}
+
 .fontSizeSlider {
   width:80%;
   margin-top:10px;
@@ -20,6 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px; /* Add top padding */
+   min-height: 95vh;
 }
 
 .slogan-container {
@@ -30,25 +36,37 @@ body {
 
 /* Nav Bar Styles */
 ul {
+
   list-style: none;
+  display:flex;
+  align-items: center;
+
+  
 }
 
-ul li a {
+
+  ul li a {
+  display:inline-block;
   text-decoration: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: darkblue;
-  margin: 120px;
-
 }
+
+
+
+
 
 .menu-open li {
   padding-top: 20px;
 }
 
-.menu-open {
-  transform: translate(-230px, 0);
+#menu.open {
+
+  right: 0;
+  flex-direction: column;
 
 }
+
 
 #menu {
   background: orange;
@@ -60,7 +78,10 @@ ul li a {
   margin: 0;
   padding: 0;
   right: -230px;
+  transition: right 0.3s ease; /* Add transition for smooth animation */
+
 }
+
 
 #menu li a:hover,
 #menu li a:focus {
@@ -112,25 +133,49 @@ ul li a {
   .toggle {
     top: 0;
     display: none;
+   
   }
 
   .container.menu-open {
     transform: none;
+  
+  }
 
+  .menu-open #menu ul {
+    justify-content: flex-start;
   }
 
   #menu {
+    margin: 0;
+    padding: 10px 0;
     width: 100%;
-    position: static;
+    display: inline-block;
+    position: relative;
+    right: 0;
   }
-
-
+  
   #menu li {
     display: inline-block;
     padding: 10px;
+   text-align:center;
+    flex-direction: column;
+    
   }
 
 
+ 
+  #menu.open ul {
+     justify-content: flex-start;
+
+  }
+
+  #menu.open li {
+margin: 10px 0;
+  }
+
+  #menu.open li:not(:last-child) {
+    margin-bottom: 10px; /* Adjust the vertical margin between items */
+  }
 
   #menu li a:hover,
   #menu li a:focus {
@@ -147,6 +192,7 @@ ul li a {
 
   color: white;
   cursor: pointer;
+  
 }
 
 h3 {
@@ -221,11 +267,15 @@ mark {
 
 }
 
+
 #p_logo {
-  text-align: left;
-  margin-left: 0;
+ display:flex;
+  align-items:center;
 
 }
+
+
+
 
 
 .con3 {
@@ -253,18 +303,22 @@ mark {
   font-size: 1.5rem;
   text-align: center;
   margin: 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
 /* Contact button on NAV header  */
 #myBtn {
   transition-duration: 0.4s;
-
   background-color: orange;
   color: navy;
   border: 2px solid navy;
   /* Green */
   font-size: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+   
 }
 
 #myBtn:hover {
@@ -275,11 +329,13 @@ mark {
 
 }
 
+/* THIS IS WHAT WE TRANSPORT SERVICES TITLE */
 #p_homePageServices {
   text-align: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.5rem;
   color: navy;
+
 }
 
 /* Rent button bottom */
@@ -303,13 +359,57 @@ mark {
 
 }
 
+.grid-item h2 {
+  margin-top: 10px; /* Adjust this value to move the headings higher */
+  margin-bottom: 15px; /* Add margin between heading and image */
+}
 
 
+
+
+/* MEDIA QUERY - TABLET VIEW - FOR HOME PAGE CARD */
+@media only screen and (max-width:1079px) {
+  .con3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-item {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;;
+   
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center; /* Center text in grid items */
+    padding:20px;
+  }
+
+  .grid-item img {
+   max-width: 100%;
+    height:auto;
+    margin-bottom: 15px;
+  }
+
+  .homeImg,
+  .homeInfo {
+    width: 100%;
+  }
+}
+
+
+/* Responsive two first div boxes on home page: PHONE */
+@media (max-width: 600px) {
+  .grid-item {
+    width: 100%;
+    
+  }
+}
 
 
 /* Responsiveness for the home page service cards  */
 @media only screen and (max-width:600px) {}
-
 
 /* Div box placement home page landing */
 .homeInfo {
@@ -397,6 +497,7 @@ mark {
 }
 
 #p_logoText {
+  margin:0;
   color: #001e57;
 }
 
