@@ -712,3 +712,12 @@ iframe {
 .slick-current {
   opacity: 1;
 }
+
+/* next arrow */
+.slick-next{
+  right:30px;
+}
+
+.slick-prev{
+  left:30px;
+}
