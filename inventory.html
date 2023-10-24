@@ -25,7 +25,8 @@
     <script src="script.js"></script>
 
     <!-- translation script -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- This script places a badge on your repl's full-browser view back to your repl's cover page.
   Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue,
   blurple, magenta, pink! -->
@@ -64,81 +65,88 @@
       </ul>
     </nav>
 
-  <!-- The modal -->
-  <div id="myModal" class="modal">
+    <!-- The modal -->
+    <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <!-- iframe embed code from google forms -->
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdDClUskNTHmVX4VIxAobHIMOItqxFGonqiWslWZwY2ZBy6yQ/viewform?usp=sharingtrue"
-        width="640" height="471" frameborder="10" marginheight="0" marginwidth="0">Loading…</iframe>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- iframe embed code from google forms -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdDClUskNTHmVX4VIxAobHIMOItqxFGonqiWslWZwY2ZBy6yQ/viewform?usp=sharingtrue"
+          width="640" height="471" frameborder="10" marginheight="0" marginwidth="0">Loading…</iframe>
 
+      </div>
     </div>
-  </div>
 
-        <h1 id="p_homePageServices"> OUR INVENTORY </h1>
+    <h1 id="p_homePageServices"> OUR INVENTORY </h1>
 
     <h1 id="p_homePageServices"> MORE DETAILS </h1>
     <div class="container con3">
-      <div class="grid-item cont1"> <h2> FORD F-550</h2>
-    <p> Info </p>
-      </div> 
-      <div class="grid-item cont2"> <h2> Mack Anthem</h2>
-       
-        
+      <div class="grid-item cont1">
+        <h2> FORD F-550</h2>
+        <p> Info </p>
+      </div>
+      <div class="grid-item cont2">
+        <h2> Mack Anthem</h2>
+
+
       </div>
 
-      <div class="grid-item cont3"> <h2>Kenworth W990</h2>
-       
+      <div class="grid-item cont3">
+        <h2>Kenworth W990</h2>
+
       </div>
     </div>
     <div class="container con3">
-      <div class="grid-item cont1"> <h2> Volvo VNX</h2>
-     
-      </div> 
-      <div class="grid-item cont2"> <h2> Freightliner 122SD</h2>
-      
-      
+      <div class="grid-item cont1">
+        <h2> Volvo VNX</h2>
+
+      </div>
+      <div class="grid-item cont2">
+        <h2> Freightliner 122SD</h2>
+
+
       </div>
 
-      <div class="grid-item cont3"> <h2>MAN TGX</h2>
-      
+      <div class="grid-item cont3">
+        <h2>MAN TGX</h2>
+
       </div>
     </div>
+<!-- Rent Btn -->
+     <a href="rentPage.html"><button type="button" id="b_finalRentBtnHome" > Rent A Truck <span>&rarr;</span> </button></a>
 
-      
-   <script>
-    // for some reason it doesnt work in the script.js file
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
+    <script>
+      // for some reason it doesnt work in the script.js file
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
 
-    btn.onclick = function () {
-      modal.style.display = "block";
-    }
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
 
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
+      span.onclick = function () {
         modal.style.display = "none";
       }
-    }
-  </script>
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
 
 
 
   </div>
-        <!-- Translation script -->
-    <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-  }
-</script>
+  <!-- Translation script -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
 
   </div>
   <!-- Footer -->
@@ -146,9 +154,10 @@
     <p>Shergill Transport™ 2023 || ShergillTransport@gmail.com</p>
     <div id="google_translate_element"></div>
     <label for="fontSize">Adjust Font Size:</label>
-    <input type="range" id="fontSize" class="fontSizeSlider" min="12" max="18" step="1" value="16" oninput="changeFontSize(this.value)">
+    <input type="range" id="fontSize" class="fontSizeSlider" min="12" max="18" step="1" value="16"
+      oninput="changeFontSize(this.value)">
 
   </footer>
 </body>
-  </html>
-  
+
+</html>
