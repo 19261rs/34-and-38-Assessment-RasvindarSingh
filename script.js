@@ -448,12 +448,3 @@ function showMessageRentalModal(message) {
 }
 
 //INVENTORY PAGE 
-document.addEventListener("DOMContentLoaded", function () {
-  var learnMoreButton = document.querySelector(".learn-more");
-  var hiddenInfo = document.querySelector(".hidden-info");
-
-  learnMoreButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    hiddenInfo.style.display = hiddenInfo.style.display === "none" ? "block" : "none";
-  });
-});

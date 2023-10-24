@@ -83,90 +83,87 @@
 
     <h1 id="p_homePageServices"> SPECIFICATIONS</h1>
     <div class="container con3">
-      <div class="grid-item cont1">
+      <div class="grid-item-inv cont1">
         <h2> FORD F-550</h2>
-        
-        <p class="hidden-info"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
-        300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
-        6.8L V10 with CNG/LPG Gaseous Engine Prep Package  </p>
-           <a href="#" class="learn-more">Learn More</a>
-       
+
+        <p class="hidden-info"  id="hidden-info-f550"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
+          300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
+          6.8L V10 with CNG/LPG Gaseous Engine Prep Package </p>
+        <a href="#" class="learn-more" id="learn-more-f550">Learn More</a>
+
       </div>
-      <div class="grid-item cont2">
+      <div class="grid-item-inv cont2">
         <h2> Mack Anthem</h2>
-
-       <li>Class: 8</li> 
-
-       <li>Horsepower:  415-505 HP</li>
-
-      <li>Torque: 1,260-1,900 lb. Ft.</li> 
-
-      <li> GVW: 53,000-62,000</li> 
-
-      <li> GCW: 80,000+</li>
- 
+        <p class="hidden-info"  id="hidden-info-mack"> Class: 8, Horespower: 415-505 HP, Torque: 1,260-1900 lb. Ft., GVW: 53,000 - 62,000, GCW: 80,000+ </p>
+        <a href="#" class="learn-more" id="learn-more-mack">Learn More</a>
+      
       </div>
 
-      <div class="grid-item cont3">
+      <div class="grid-item-inv cont3">
         <h2>Kenworth W990</h2>
-<p>SPECIFICATION
-Engine / Powertrain
-PACCAR MX-13 Engine
-12.9 Liter
-405-510 HP
-1,450 – 1,850 lb-ft of Torque
-TruckTech+ Remote Diagnostics</p>
+        <p class="hidden-info" id="hidden-info-kenworth"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
+          300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
+          6.8L V10 with CNG/LPG Gaseous Engine Prep Package </p>
+        <a href="#" class="learn-more" id="learn-more-kenworth">Learn More</a>
       </div>
-    </div>
-    <div class="container con3">
-      <div class="grid-item cont1">
-        <h2> Volvo VNX</h2>
-
-      </div>
-      <div class="grid-item cont2">
-        <h2> Freightliner 122SD</h2>
-
-
       </div>
 
-      <div class="grid-item cont3">
-        <h2>MAN TGX</h2>
-      
+      <div class="container con3">
+        <div class="grid-item-inv cont1">
+          <h2> Volvo VNX</h2>
+        
+          <p class="hidden-info" id="hidden-info-volvo">  Muscle and maneuverability for local heavy-haul applications. Volvo D13, 455-500 hp,1750-1900 lb-ft.,Volvo I-Shift for Severe Duty – 12 speed </p>
+          <a href="#" class="learn-more" id="learn-more-volvo">Learn More</a>
 
+        </div>
+        <div class="grid-item-inv cont2">
+          <h2> Freightliner 122SD</h2>
+
+          <p class="hidden-info" id="hidden-info-122sd"> Horespower: 350 - 600HP, GVW: 92,000 lbs, Torque: Up to 2050 @ 1100 RPM, Engines: Detroit™ DD13® Detroit™ DD15® Detroit™ DD16® Cummins ISX15 </p>
+          <a href="#" class="learn-more" id="learn-more-122sd">Learn More</a>
+          
+        </div>
+
+        <div class="grid-item-inv cont3">
+          <h2>MAN TGX</h2>
+          <p class="hidden-info" id="hidden-info-tgx">  Max Power: 471kW – (640hp) at 1800rpm. Max torque: 3000Nm at 900 to 1380rpm. Type: In-line six-cylinder</p>
+          <a href="#" class="learn-more" id="learn-more-tgx">Learn More</a>
+
+        </div>
       </div>
-    </div>
-<!-- Rent Btn -->
-     <a href="rentPage.html"><button type="button" id="b_finalRentBtnHome" > Rent A Truck <span>&rarr;</span> </button></a>
+      <!-- Rent Btn -->
+      <a href="rentPage.html"><button type="button" id="b_finalRentBtnHome"> Rent A Truck <span>&rarr;</span>
+        </button></a>
 
-    <script>
-      
-      // for some reason it doesnt work in the script.js file
-      var modal = document.getElementById("myModal");
-      var btn = document.getElementById("myBtn");
-      var span = document.getElementsByClassName("close")[0];
+      <script>
 
-      btn.onclick = function () {
-        modal.style.display = "block";
-      }
+        // for some reason it doesnt work in the script.js file
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
 
-      span.onclick = function () {
-        modal.style.display = "none";
-      }
+        btn.onclick = function () {
+          modal.style.display = "block";
+        }
 
-      window.onclick = function (event) {
-        if (event.target == modal) {
+        span.onclick = function () {
           modal.style.display = "none";
         }
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+
+    </div>
+    <!-- Translation script -->
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
       }
     </script>
-
-  </div>
-  <!-- Translation script -->
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-  </script>
 
   </div>
   <!-- Footer -->
@@ -181,14 +178,20 @@ TruckTech+ Remote Diagnostics</p>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      var learnMoreButton = document.querySelector(".learn-more");
-      var hiddenInfo = document.querySelector(".hidden-info");
+      var learnMoreButtons = document.querySelectorAll(".learn-more");
 
-      learnMoreButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        hiddenInfo.style.display = hiddenInfo.style.display === "none" ? "block" : "none";
+      learnMoreButtons.forEach(function (button) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          var infoId = this.id.replace('learn-more-', ''); // Extract the ID suffix
+          var hiddenInfo = document.getElementById('hidden-info-' + infoId); // Find hidden-info by ID
+          hiddenInfo.style.display = hiddenInfo.style.display === "none" ? "block" : "none";
+        });
       });
     });
+
+
+
   </script>
 </body>
 
