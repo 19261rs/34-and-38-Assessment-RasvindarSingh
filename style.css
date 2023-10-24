@@ -718,6 +718,12 @@ iframe {
   right:30px;
 }
 
+/* prev arrow */
 .slick-prev{
   left:30px;
+}
+
+/* Dots for manual movement */
+.slick-dots li button:before {
+  font-size:15px;
 }
