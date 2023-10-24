@@ -19,11 +19,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Home - Shergill Transport</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+   
+    <!-- slick css files connection -->
+    <link rel="stylesheet" type="text/css" href="styles/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
+     <link href="style.css" rel="stylesheet" type="text/css" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script src="script.js"></script>
-
+  
     <!-- translation script -->
     <script type="text/javascript"
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -32,6 +37,7 @@
   blurple, magenta, pink! -->
     <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 
+   
   </head>
 
 <body>
@@ -58,8 +64,8 @@
         </li>
 
         </li>
-        <li><a href="rentPage.html">RENT</a></li>
         <li><a href="index.html">HOME</a></li>
+        <li><a href="rentPage.html">RENT</a></li>
         <li> <button id="myBtn" href="">CONTACT US</button></li>
 
       </ul>
@@ -80,11 +86,28 @@
     </div>
 
     <h1 id="p_homePageServices"> OUR INVENTORY </h1>
+<!--slideshow-->
+    <div class="carousel">
+      <img src="https://files.worldwildlife.org/wwfcmsprod/images/Shark_Whitetip_GPN257599_Species/story_full_width/7u6ythcedl_GPN257599_whitetip_shark.jpg" alt="">
+       <img src="https://a-z-animals.com/media/2021/10/shark-1024x535.jpg" alt="">
+       <img src="https://www.oceanlifeeducation.com.au/wp-content/uploads/2020/07/sharks-3.jpg" alt="">
+       <img src="https://www.dailymaverick.co.za/wp-content/uploads/Roving-Cloete-SharksTW3.jpg" alt="">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScnl8NYN8SLJ1nVlw30ilgMTKvpJOV1syMPRiia2XX0tpSWwI890nyhQfIIuEgB7DnnYo&usqp=CAU" alt="">
+       <img src="https://images.newscientist.com/wp-content/uploads/2020/08/11180158/w7pm8n_web.jpg" alt="">
+    </div>
 
+
+
+
+
+
+
+
+    
     <h1 id="p_homePageServices"> SPECIFICATIONS</h1>
     <div class="container con3">
       <div class="grid-item-inv cont1">
-        <h2> FORD F-550</h2>
+        <h3> FORD F-550</h3>
 
         <p class="hidden-info"  id="hidden-info-f550"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
           300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
@@ -93,31 +116,29 @@
 
       </div>
       <div class="grid-item-inv cont2">
-        <h2> Mack Anthem</h2>
-        <p class="hidden-info"  id="hidden-info-mack"> Class: 8, Horespower: 415-505 HP, Torque: 1,260-1900 lb. Ft., GVW: 53,000 - 62,000, GCW: 80,000+ </p>
+        <h3> Mack Anthem</h3>
+        <p class="hidden-info"  id="hidden-info-mack"> Class: 8, Horespower: 415-505 HP, Torque: 1,260-1900 lb. Ft., GVW: 53,000 - 62,000, GCW: 80,000+, 11 Lite</p>
         <a href="#" class="learn-more" id="learn-more-mack">Learn More</a>
       
       </div>
 
       <div class="grid-item-inv cont3">
-        <h2>Kenworth W990</h2>
-        <p class="hidden-info" id="hidden-info-kenworth"> 6.7L Power Stroke V8 Turbo Diesel (Std. on Lariat)
-          300 hp @ 2,800 rpm / 660 lb.-ft. torque @ 1,600 rpm
-          6.8L V10 with CNG/LPG Gaseous Engine Prep Package </p>
+        <h3>Kenworth W990</h3>
+        <p class="hidden-info" id="hidden-info-kenworth"> PACCAR MX-13 Engine, 12.9 Liter, 405-510 HP, 1,450 – 1,850 lb-ft of Torque, TruckTech+ Remote Diagnostics </p>
         <a href="#" class="learn-more" id="learn-more-kenworth">Learn More</a>
       </div>
       </div>
 
       <div class="container con3">
         <div class="grid-item-inv cont1">
-          <h2> Volvo VNX</h2>
+          <h3> Volvo VNX</h3>
         
           <p class="hidden-info" id="hidden-info-volvo">  Muscle and maneuverability for local heavy-haul applications. Volvo D13, 455-500 hp,1750-1900 lb-ft.,Volvo I-Shift for Severe Duty – 12 speed </p>
           <a href="#" class="learn-more" id="learn-more-volvo">Learn More</a>
 
         </div>
         <div class="grid-item-inv cont2">
-          <h2> Freightliner 122SD</h2>
+          <h3> Freightliner 122SD</h3>
 
           <p class="hidden-info" id="hidden-info-122sd"> Horespower: 350 - 600HP, GVW: 92,000 lbs, Torque: Up to 2050 @ 1100 RPM, Engines: Detroit™ DD13® Detroit™ DD15® Detroit™ DD16® Cummins ISX15 </p>
           <a href="#" class="learn-more" id="learn-more-122sd">Learn More</a>
@@ -125,7 +146,7 @@
         </div>
 
         <div class="grid-item-inv cont3">
-          <h2>MAN TGX</h2>
+          <h3>MAN TGX</h3>
           <p class="hidden-info" id="hidden-info-tgx">  Max Power: 471kW – (640hp) at 1800rpm. Max torque: 3000Nm at 900 to 1380rpm. Type: In-line six-cylinder</p>
           <a href="#" class="learn-more" id="learn-more-tgx">Learn More</a>
 
@@ -193,6 +214,19 @@
 
 
   </script>
+      <!-- slick jquery-->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
+  </script>
+
 </body>
 
 </html>
